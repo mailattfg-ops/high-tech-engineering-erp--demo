@@ -22,7 +22,7 @@ interface PurchaseItem {
 }
 
 export default function Purchase() {
-  const { toast } = useOutletContext<OutletCtx>();
+  const {} = useOutletContext<OutletCtx>();
   const [tab, setTab] = useState<'list' | 'add' | 'suppliers'>('list');
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState<typeof sampleProducts>([]);

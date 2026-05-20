@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Plus, Shield, Trophy, UserCheck, Phone } from 'lucide-react';
+import { Plus, Shield, Trophy } from 'lucide-react';
 import { useOutletContext } from 'react-router-dom';
 import { Badge, Section, PageHeader } from '../components/shared/UIComponents';
 import { sampleCustomers, sampleSalesmen, staffLeaderboard } from '../data/mockData';
 
 interface OutletCtx { darkMode: boolean; handleRefresh: () => void; toast: (msg: string, type?: 'success'|'error'|'info'|'warning') => void; }
 
-const roles = ['Manager', 'Assistant Manager', 'Salesman', 'Sales Assistant', 'Contractor', 'Party'];
+// unused roles array removed
 
 const staffList = [
   { id: 'U001', name: 'Rajan Thomas', role: 'Manager', userId: 'rajan_t', mobile: '9876543200', firm: 'Hi Tech Engineering - Main', active: true, commission: 3 },
@@ -26,7 +26,7 @@ const permissions = [
 ];
 
 export default function CRM() {
-  const { toast } = useOutletContext<OutletCtx>();
+  const {} = useOutletContext<OutletCtx>();
   const [tab, setTab] = useState<'customers' | 'staff' | 'commission' | 'leaderboard'>('customers');
   const [selectedStaff, setSelectedStaff] = useState<typeof staffList[0] | null>(null);
 

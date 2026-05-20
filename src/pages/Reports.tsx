@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Download, Filter, TrendingUp } from 'lucide-react';
 import { useOutletContext } from 'react-router-dom';
 import { Badge, Section, PageHeader } from '../components/shared/UIComponents';
-import { sampleProducts, sampleCustomers, recentSales, dueBillsData } from '../data/mockData';
+import { sampleProducts, recentSales, dueBillsData } from '../data/mockData';
 
 interface OutletCtx { darkMode: boolean; handleRefresh: () => void; toast: (msg: string, type?: 'success'|'error'|'info'|'warning') => void; }
 
@@ -31,7 +31,7 @@ const categorySalesData = [
 ];
 
 export default function Reports() {
-  const { toast } = useOutletContext<OutletCtx>();
+  const {} = useOutletContext<OutletCtx>();
   const [activeReport, setActiveReport] = useState('Sales Report');
   const [filterCategory, setFilterCategory] = useState('All');
   const [filterSalesman, setFilterSalesman] = useState('All');
@@ -113,7 +113,7 @@ export default function Reports() {
                     <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                     <XAxis dataKey="category" tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
                     <YAxis tick={{ fontSize: 10, fill: '#94a3b8' }} axisLine={false} tickLine={false} tickFormatter={v => `₹${v / 1000}K`} />
-                    <Tooltip formatter={(v: number) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
+                    <Tooltip formatter={(v: any) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
                     <Legend iconSize={10} wrapperStyle={{ fontSize: 12 }} />
                     <Bar dataKey="sales" name="Sales" fill="#f97316" radius={[4, 4, 0, 0]} />
                     <Bar dataKey="profit" name="Profit" fill="#22c55e" radius={[4, 4, 0, 0]} />
@@ -130,7 +130,7 @@ export default function Reports() {
                     <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
                     <XAxis type="number" tick={{ fontSize: 10, fill: '#94a3b8' }} axisLine={false} tickLine={false} tickFormatter={v => `₹${v / 1000}K`} />
                     <YAxis type="category" dataKey="name" tick={{ fontSize: 10, fill: '#64748b' }} axisLine={false} tickLine={false} width={60} />
-                    <Tooltip formatter={(v: number) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
+                    <Tooltip formatter={(v: any) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
                     <Bar dataKey="sales" name="Sales" fill="#3b82f6" radius={[0, 4, 4, 0]} />
                   </BarChart>
                 </ResponsiveContainer>

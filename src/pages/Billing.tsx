@@ -43,7 +43,6 @@ export default function Billing() {
 
   const addToCart = (product: typeof sampleProducts[0]) => {
     const pTypeIdx = priceTypes.findIndex(t => t.label === priceType);
-    const margin = 20;
     const retail = product.purchasePrice * 1.2;
     const profit = retail - product.purchasePrice;
     const discPct = pTypeIdx >= 0 ? priceTypes[pTypeIdx].discountPct : 0;

@@ -86,7 +86,7 @@ export default function Dashboard() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="month" tick={{ fontSize: 12, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
                 <YAxis tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} tickFormatter={v => `₹${v / 1000}K`} />
-                <Tooltip formatter={(v: number) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, border: '1px solid #e2e8f0', fontSize: 12 }} />
+                <Tooltip formatter={(v: any) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, border: '1px solid #e2e8f0', fontSize: 12 }} />
                 <Legend iconSize={10} iconType="circle" wrapperStyle={{ fontSize: 12 }} />
                 <Area type="monotone" dataKey="sales" name="Sales" stroke="#f97316" strokeWidth={2.5} fill="url(#gSales)" dot={false} />
                 <Area type="monotone" dataKey="profit" name="Profit" stroke="#22c55e" strokeWidth={2} fill="url(#gProfit)" dot={false} />
@@ -127,7 +127,7 @@ export default function Dashboard() {
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="month" tick={{ fontSize: 12, fill: '#94a3b8' }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 11, fill: '#94a3b8' }} axisLine={false} tickLine={false} tickFormatter={v => `₹${v / 1000}K`} />
-              <Tooltip formatter={(v: number) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
+              <Tooltip formatter={(v: any) => [`₹${v.toLocaleString('en-IN')}`, '']} contentStyle={{ borderRadius: 10, fontSize: 12 }} />
               <Bar dataKey="purchase" name="Purchase" fill="#3b82f6" radius={[6, 6, 0, 0]} maxBarSize={40} />
             </BarChart>
           </ResponsiveContainer>

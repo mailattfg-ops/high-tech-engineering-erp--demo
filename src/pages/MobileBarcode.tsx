@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Smartphone, Camera, CheckCircle, Package, MapPin, ArrowRight, RefreshCw, Wifi, WifiOff } from 'lucide-react';
+import { Camera, CheckCircle, Package, MapPin, ArrowRight, RefreshCw, Wifi, WifiOff } from 'lucide-react';
 import { useOutletContext } from 'react-router-dom';
 import { Badge, Section, PageHeader } from '../components/shared/UIComponents';
 import { sampleProducts } from '../data/mockData';

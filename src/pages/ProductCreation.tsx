@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Search, Filter, Edit, Package, AlertTriangle, CheckCircle, Barcode } from 'lucide-react';
+import { Plus, Search, Filter, Edit, Package, CheckCircle, Barcode } from 'lucide-react';
 import { useOutletContext } from 'react-router-dom';
 import { PageHeader, Badge, Section } from '../components/shared/UIComponents';
 import { sampleProducts, marginCategories, priceTypes } from '../data/mockData';
